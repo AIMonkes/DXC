@@ -1,3 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:https="http://www.w3.org/1999/xhtml">
+
+ <title> Create an Account </title>
+
+    <style>
+        .button{
+    background-color: #000000;
+    color: #2EFF26;
+    border: none;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-left: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    transition: opacity 0.15s;
+
+        }
+    </style>
 {% extends 'base.html' %}
 {% load my_filters %}
 {% block title %}
@@ -29,3 +51,5 @@ Input
 {% endif %}
 <a href="{% url 'home' %}">Home</a>
 {% endblock %}
+
+</html>
