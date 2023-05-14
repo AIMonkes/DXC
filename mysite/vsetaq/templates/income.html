@@ -11,13 +11,14 @@ Input
 <form method="post" action="">
 {% csrf_token %}
 {{form.as_p}}
-    <input type="submit" value="Submit">
+    <input class="button", type="submit" value="Submit">
 </form>
     </div>
 {% else %}
 <div>
     <a href="/edit_income">Edit</a>
 </div>
+<a href="{% url 'choose_input' %}">Go back</a><br>
 {% endif %}
 {% endif %}
 {% endblock %}

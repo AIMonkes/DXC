@@ -1,22 +1,22 @@
 {% extends 'base.html' %}
 
 {% block title %}
-My Expenses
+My Finished goals
 {% endblock %}
 {% block content %}
 
-<h1>My Expenses</h1>
+<h1>My Finished goals</h1>
 
-{% if expenses %}
+{% if goal %}
     <ul>
-    {% for expense in expenses %}
+    {% for goals in goal %}
         <li>
-           <a href="{% url 'expenses_detail' expense.id %}">{{ expense.expenses }} - {{ expense.categories }}</a>
+          {{ goals.save_money }} - {{ goals.goal }}
         </li>
     {% endfor %}
     </ul>
 {% else %}
-    <p>You haven't set any expenses yet.</p>
+    <p>You don't have finished goals yet.</p>
 {% endif %}
 <a href="{% url 'check' %}">Go back</a><br>
  <a href="{% url 'home' %}">Home</a>

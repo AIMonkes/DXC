@@ -1,22 +1,22 @@
 {% extends 'base.html' %}
 
 {% block title %}
-My Expenses
+My Goals
 {% endblock %}
 {% block content %}
 
-<h1>My Expenses</h1>
+<h1>My side income</h1>
 
-{% if expenses %}
+{% if check_side_income %}
     <ul>
-    {% for expense in expenses %}
+    {% for side in check_side_income %}
         <li>
-           <a href="{% url 'expenses_detail' expense.id %}">{{ expense.expenses }} - {{ expense.categories }}</a>
+            <a href="{% url 'side_income_detail' side.id %}">{{ side.side_income }} - {{ side.category }}</a>
         </li>
     {% endfor %}
     </ul>
 {% else %}
-    <p>You haven't set any expenses yet.</p>
+    <p>You haven't set any side incomes yet.</p>
 {% endif %}
 <a href="{% url 'check' %}">Go back</a><br>
  <a href="{% url 'home' %}">Home</a>

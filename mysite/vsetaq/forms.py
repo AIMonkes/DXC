@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 from django import forms
-from .models import Income, Expenses, Goals
+from .models import Income, Expenses, Goals, Side_income
 
 
 class IncomeForm(ModelForm):
@@ -30,8 +30,20 @@ class GoalsForm(ModelForm):
     class Meta:
         model = Goals
         fields = '__all__'
-        exclude = ['user']
+        exclude = ['user', 'finished']
         widgets = {
             'save_money': forms.TextInput(attrs={'class': 'form-control'}),
             'goal': forms.TextInput(attrs={'class': 'form-control'})
+        }
+
+
+class Side_incomeForm(ModelForm):
+
+    class Meta:
+        model = Side_income
+        fields = '__all__'
+        exclude = ['user']
+        widgets = {
+            'side_income': forms.TextInput(attrs={'class': 'form-control'}),
+            'category': forms.TextInput(attrs={'class': 'form-control'})
         }

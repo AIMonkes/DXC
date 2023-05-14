@@ -10,18 +10,20 @@
 
 <div class="register">
     <form method="POST" class="form-group">
-	{% csrf_token %}
-	{{ form.as_p }}
-	<button type="submit" class="button">Register</button>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="button">Register</button>
     </form>
 </div>
+
 
 <head>
  <title> Create an Account </title>
 
     <style>
 
-.reg{
+.reg
+{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,11 +33,12 @@
     font-weight: bold;
     margin: 0px;
 }
-
-.register {
+.register
+{
+    justify-content: center;
     background-color: black;
-    border: var(--clr-neon) 0.155em solid;
-    padding: 0.25em 1em;
+    border: var(--clr-neon) 0.125em solid;
+    padding: 0.25em 0.75em;
     border-radius: 0.25em;
     }
 
@@ -43,14 +46,16 @@
     color: white;
     font-family: "Times New Roman", Times, serif;
     font-size: 20px;
+    padding: 10px;
 }
-body {
-    background-image: url("https://wallpaper.dog/large/17278498.jpg");
+body
+{
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-:root {
+:root
+{
   --clr-neon: #2EFF26;
 }
 
@@ -59,73 +64,16 @@ body {
 *::after {
   box-sizing: border-box;
 }
-
-button {
-
-    background-color: #000000;
-    color: #2EFF26;
-    border: none;
-    border-radius: 2px;
+button
+{
+    background-color: black;
     font-weight: bold;
-    font-size: 15px;
     cursor: pointer;
-    margin-right: 8px;
-    margin-left: 10px;
-    padding-left: 16px;
-    padding-right: 16px;
     transition: opacity 0.15s;
-
-
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  color: var(--clr-neon);
-  border: var(--clr-neon) 0.125em solid;
-  padding: 0.25em 1em;
-  border-radius: 0.25em;
-
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-
-  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
-
-  position: relative;
-}
-
-button::before {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  background: var(--clr-neon);
-  top: 120%;
-  left: 0;
-
-  filter: blur(1em);
-  opacity: 0.7;
-}
-
-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  box-shadow: 0 0 2em 0.5em var(--clr-neon);
-  opacity: 0;
-  background-color: var(--clr-neon);
-  z-index: -1;
-  transition: opacity 100ms linear;
-}
-
-button:hover,
-button:focus {
-  color: var(--clr-bg);
-  text-shadow: none;
-}
-
-button:hover::before,
-button:focus::before {
-  opacity: 1;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 0.1em solid;
+    padding: 0.20em 0.75em;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
 }
 
     </style>
@@ -143,5 +91,3 @@ button:focus::before {
 {% endblock %}
 
 </html>
-
-
